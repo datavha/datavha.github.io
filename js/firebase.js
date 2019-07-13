@@ -10,8 +10,6 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-console.log(firebase);
-
 $("#form").on("submit", function(e) {
 	e.preventDefault();
 	const nome = $("#nome").val();
@@ -22,7 +20,6 @@ $("#form").on("submit", function(e) {
 			alert("Parabéns, em alguns dias entraremos em contato com você!")
 		)
 		.catch(err => {
-			console.log(err);
 			alert("Falha ao enviar e-mail");
 		});
 });
@@ -34,7 +31,6 @@ $("#subscribeform").on("submit", function(e) {
 	submitPessoa({ nome: null, email })
 		.then(() => alert("Você está inscrito em nossa lista de e-mails!"))
 		.catch(err => {
-			console.log(err);
 			alert("Falha ao enviar e-mail");
 		});
 });
