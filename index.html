@@ -144,27 +144,32 @@
 										data-aos="fade-up"
 										data-aos-delay="500"
 									>
-										<form action="" method="post" class="form-box">
+										<form id="form" class="form-box">
 											<h3 class="h4 text-black mb-4">
 												Gostaria de saber mais?
 											</h3>
 											<div class="form-group">
 												<input
+													id="nome"
 													type="text"
 													class="form-control"
 													placeholder="Seu nome"
+													name="nome"
 												/>
 											</div>
 											<div class="form-group">
 												<input
 													type="email"
+													id="email"
 													class="form-control"
 													placeholder="Seu melhor e-mail"
+													name="email"
 												/>
 											</div>
 											<div class="form-group">
 												<input
 													type="submit"
+													id="btnform"
 													class="btn btn-primary btn-pill"
 													value="Saber mais"
 												/>
@@ -591,10 +596,11 @@
 								Nós enviaremos para você notícias sobre tecnologia e sobre
 								nossas novidades!
 							</p>
-							<form action="#" class="footer-subscribe">
+							<form id="subscribeform" class="footer-subscribe">
 								<div class="d-flex mb-5">
 									<input
 										type="text"
+										id="subscribeemail"
 										class="form-control rounded-0"
 										placeholder="Seu melhor e-mail"
 									/>
@@ -643,7 +649,16 @@
 		<script src="js/aos.js"></script>
 		<script src="js/jquery.fancybox.min.js"></script>
 		<script src="js/jquery.sticky.js"></script>
-
 		<script src="js/main.js"></script>
+
+		<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+
+		<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+
+		<!-- Add Firebase products that you want to use -->
+		<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-firestore.js"></script>
+		<script src="js/firebase.js"></script>
 	</body>
 </html>
